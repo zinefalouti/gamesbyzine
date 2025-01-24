@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Importing Tailwind CSS Framework-->
+    <script src="js/tailwind.js"></script>
+
+
+    <!-- Importing CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- SEO Integration Part-->
+    <title>Games By Zine | Solo Video Game Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Games By Zine a Solo video game developer">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- Hero Starts Here -->   
+<div class="header">
+    <div class="container mx-auto px-4">
+        <div class="nav">
+            <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Games By Zine Logo"/>
+            </a>
+            </div>
+            <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="https://store.steampowered.com/app/1828670/Alder_Forge_Soundtrack/" target="_blank">
+                Soundtrack
+            </a>
+            <a href="https://youtube.com/playlist?list=PLLuiWKZFFPiTbfoNQyLRSQZ2NVA_7B5rM&si=yP46FbRhMjVdBQb6" target="_blank">
+                Creation
+            </a>
+            <a href="contact.html">Contact</a>                   
+            <button onclick="window.open('https://store.steampowered.com/developer/Games-By-Zine', '_blank');"> 
+                Store 
+            </button>
+            </div>
+            <div class="hamburger">
+            <button onclick="toggleMobile()"><img src="images/hamburger.png" alt="Hamburger"/></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <!-- Hamburger Open Menu In Mobile View -->
+      <div class="navigation-mobile" id="navmobile">
+        <a href="#" onclick="toggleMobile()"><img src="images/close.png" alt="Close Mobile Menu" class="closemobile"/></a>
+        <nav>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://store.steampowered.com/app/1828670/Alder_Forge_Soundtrack/" target="_blank">
+            Soundtrack
+        </a></li>
+        <li><a href="https://youtube.com/playlist?list=PLLuiWKZFFPiTbfoNQyLRSQZ2NVA_7B5rM&si=yP46FbRhMjVdBQb6" target="_blank">
+            Creation
+        </a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </nav>                   
+        <button onclick="window.open('https://store.steampowered.com/developer/Games-By-Zine', '_blank');"> 
+            Store 
+        </button>
+     </div>
+
+
+     <!-- Mobile Nav Script -->
+     <script>
+
+        function toggleMobile(){
+            navmobile = document.querySelector('#navmobile');
+            if (navmobile.style.display === 'none' || navmobile.style.display === '') {
+                navmobile.style.display = 'block'; // Show the div
+            } else {
+                navmobile.style.display = 'none'; // Hide the div
+            }
+        }
+
+     </script>
+
+
+<!-- Standard Hero -->
+<div class="hero-standard">
+    <div class="container mx-auto px-4">
+        <div class="hero-wrapper">
+            <div class="top-wrap">
+                <span>About Me</span>
+                <h1>Dreaming <span>Worlds!</span></h1>
+                <p>
+                    Greetings, My name is Zine, E Falouti and I welcome you all to my imaginary worlds. Gamers, Developers or Any of the wonderful
+                    people who form this amazing community ,"The Gaming Community".
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<div class="container mx-auto px-4">
+    <div class="aboutblock">
+        <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-12 lg:col-span-4">
+                <img src="images/meme.png" alt="Meme"/>
+            </div>
+            <div class="col-span-12 lg:col-span-7 lg:col-start-6">
+                <span>Introduction</span>
+                <h1>Trying To Make Games</h1>
+                <p>
+                    A 2014 software engineer graduate and academic, my passion for game development began much earlier during 
+                    my second year of high school when I started creating 2D HTML5 side-scrolling web games. In 2017, 
+                    I embarked on my first major project, The Stones of Yalmrith. This learning experience not only 
+                    deepened my understanding of the game development industry and its processes but also allowed me 
+                    to refine my skills in areas such as sculpting, retopology, baking, score composition, and environment design.
+
+                    As a lifelong gamer, I grew up with classic consoles from the pre-3D era, which instilled in me a deep 
+                    appreciation for games and the talented people who create them. If you'd like to learn more about my work, 
+                    collaborate on a project, or simply have an old drinking chat, feel free to reach out—I’d be happy to connect! 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Videos -->
+<div class="videos">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-3 lg:col-span-1">
+                <div class="vid-wrapper">
+                    <video autoplay loop muted>
+                        <source src="videos/char.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vid-footer">
+                    <span>What I do?</span>
+                    <h1>Character Design</h1>
+                </div>
+            </div>
+            <div class="col-span-3 lg:col-span-1">
+                <div class="vid-wrapper">
+                    <video autoplay loop muted>
+                        <source src="videos/envir.m4v" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vid-footer">
+                    <span>What I do?</span>
+                    <h1>Environment Design</h1>
+                </div>
+            </div>
+            <div class="col-span-3 lg:col-span-1">
+                <div class="vid-wrapper">
+                    <video autoplay loop muted>
+                        <source src="videos/music.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vid-footer">
+                    <span>What I do?</span>
+                    <h1>Music Scoring</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="container mx-auto px-4">
+    <div class="footer">
+        <div>
+            <div class="logo-footer">
+                <img src="images/logo.png" alt="Games By Zine Logo"/>
+            </div>
+            <div class="social">
+                <h3>Join Me On: </h3>
+                <a href="https://www.youtube.com/@gamesbyzine" target="_blank"><img src="images/twitter.png" alt="Games By Zine Twitter"/></a>
+                <a href="https://www.twitter.com/gamesbyzine" target="_blank"><img src="images/youtube.png" alt="Games By Zine Youtube"/></a>
+                <a href="https://discord.com/invite/SRS9gUeGUj" target="_blank"><img src="images/discord.png" alt="Games By Zine Discord"/></a>
+            </div>
+        </div>
+        <hr/>
+        <div class="copyright">
+            COPYRIGHT © <span id="year">2023</span> ZINE E FALOUTI A SOLO VIDEO GAME DEVELOPER
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = new Date().getFullYear(); // Get the current year
+        document.querySelector("#year").textContent = currentYear; // Set it to the span
+    });
+</script>
+
+</body>
+</html>

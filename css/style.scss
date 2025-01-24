@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+// Declaring Color Variables
+
+$main : #CC9500;
+$bg : #0F1014;
+$dark: #010101;
+$text : #ffffff;
+$soft : #636672;
+
+// Declaring Mixins
+@mixin divMaker($radius, $background){
+    width:100%;
+    padding:20px 30px 20px 30px;
+    border-radius:$radius;
+    background-color: $background;
+}
+
+@mixin buttonMaker($width, $bg, $hover){
+    border-radius: 40px;
+    width:$width;
+    background-color: $bg;
+    padding:10px 20px 10px 10px;
+    border:none;
+    outline:none;
+    text-align: center;
+
+    &:hover{
+        background-color: $hover;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+@mixin textMaker($size, $weight, $letterspacing, $transform, $color){
+    font-size:$size;
+    font-weight:$weight;
+    text-transform: $transform;
+    letter-spacing: $letterspacing;
+    color: $color;
+}
+
+
+// Start Of Styling
+
+body{
+    font-family: "Poppins", serif; 
+    background-color: $bg;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.63);
+    }
+  }
+
+
+  .nav{
+    @include divMaker(60px,$dark);
+    border-bottom:6px solid $main;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+
+    .logo{
+
+        @media (max-width:1024px){
+            width:160px;
+            height:auto;
+        }
+    }
+
+    .navigation{
+       display:flex;
+       justify-content: flex-end;
+       gap:33px;
+       align-items: center;
+       flex-wrap: wrap;
+
+
+       a{
+          @include textMaker(0.83rem,400 ,0px ,uppercase ,$text );
+
+          &:hover{
+            color:$main;
+            transition: 0.3s ease-in-out;
+          }
+       }
+
+       .active{
+        color:$main;
+        font-weight:700;
+       }
+
+       button{
+        @include buttonMaker(130px,$main ,$bg );
+        @include textMaker(0.83rem,700 ,3px ,uppercase ,$dark );
+
+        &:hover{
+            color:$text;
+            transition: 0.3s ease-in-out;
+        }
+       }
+
+       @media (max-width:1024px){
+         display:none;
+       }
+       
+    }
+
+    .hamburger{
+        display:none;
+
+        &:hover{
+            scale:1.13;
+            transition: 0.3s ease-in-out;
+        }
+
+        @media (max-width:1024px){
+            display:block;
+        }
+    }
+  }
+
+
+  .navigation-mobile{
+    position: absolute;
+    z-index:3;
+    background-color: #CC9500;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:5%;
+    display:none;
+
+    nav{
+        list-style-type: none;
+
+        li{
+            margin-bottom:30px;
+            a{
+                @include textMaker(2rem,400 ,3px ,uppercase ,$dark );
+                text-decoration: none;
+                
+                &:hover{
+                    color:$bg;
+                    font-weight:700;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+
+        }
+    }
+
+    button{
+        @include buttonMaker(230px,$dark ,$bg );
+        @include textMaker(1rem,700 ,3px ,uppercase ,$main );
+    }
+
+    .closemobile{
+        position: absolute;
+        top:40px;
+        right:40px;
+        &:hover{
+            scale:1.13;
+            transition: 0.3s ease-in-out;
+        }
+    }
+  }
+
+
+  .herocontent{
+    margin-top:90px;
+    text-align: left;
+
+    span{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$main );
+    }
+
+    h1{
+        @include textMaker(3.36rem,100 ,0px ,none ,$text );
+    }
+
+    p{
+        @include textMaker(0.93rem,300 ,0px ,none ,$text );
+        margin-top:40px;
+    }
+
+    .herofooter{
+
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap:26px;
+        flex-wrap: wrap;
+        width:100%;
+        margin-top:60px;
+        margin-bottom:60px;
+
+        .primary{
+            @include buttonMaker(230px,$main ,$bg );
+            @include textMaker(0.73rem,700 , 3px, uppercase, $dark);
+
+            &:hover{
+                color:$text;
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        .secondary{
+            background-color: none;
+            border:1px solid $main;
+            border-radius:40px;
+            padding:10px 20px 10px 20px;
+            outline:none;
+            @include textMaker(0.73rem,700 ,3px ,uppercase ,$main );
+
+            &:hover{
+                background-color: $main;
+                color:$dark;
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+    }
+
+
+  }
+
+  .characters{
+
+    margin-bottom:60px;
+    
+    
+     .c-wrapper{
+        position:relative;
+        @include divMaker(10px,$dark );
+        cursor: pointer;
+        margin-top:70px;
+
+        .c-container{
+            text-align: left;
+            span{
+                @include textMaker(0.73rem,700 ,1px ,uppercase ,$main );
+            }
+
+            h2{
+                @include textMaker(1.36rem,100 ,0px ,none ,$text );
+
+                span{
+                    @include textMaker(1.36rem,300 ,0px ,none ,$text );
+                    display:none;
+                }
+            }
+
+            p{
+                @include textMaker(1rem,300 ,0px ,none ,$text );
+                display:none;
+            }
+        }
+
+        .c-art{
+            position: absolute;
+            right:0%;
+            bottom:0%;
+         }
+
+        &:hover{
+
+            transform: rotateY(-20deg); /* Start slightly below */
+            transition: 0.6s ease-in-out;
+            border-left:3px solid #CC9500;
+            border-bottom:3px solid #CC9500;
+    
+            .c-container{
+                h2{
+                    span{
+                        display:inline-block;
+                        transition: 0.43s ease-in-out;
+                    }
+                }
+    
+                p{
+                    display:block;
+                }
+            }
+
+            .c-art{
+                transform: translateX(13px);
+                transition: 0.6s ease-in-out;
+            }
+        }
+    
+    
+
+
+     }
+
+
+
+    
+ 
+
+}
+
+
+.about{
+    padding-top:90px;
+    padding-bottom:60px;
+
+    span{
+        @include textMaker(0.73rem, 700, 3px,uppercase ,$soft );
+    }
+
+    h1{
+        @include textMaker(3.36rem,100 ,0px ,none ,$text );
+    }
+
+    p{
+        @include textMaker(0.93rem,300 ,0px ,none ,$text );
+        margin-bottom:30px;
+    }
+
+    a{
+        @include buttonMaker(auto,$main ,$dark );
+        @include textMaker(0.73rem,700 , 3px, uppercase, $dark);
+        padding:10px 30px 10px 30px;
+
+        &:hover{
+            color:$text;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+.games{
+    padding-top:60px;
+    padding-bottom:60px;
+}
+
+.gameblock{
+    background-color: $dark;
+    border-radius: 20px;
+    outline:none;
+    border:none;
+    width:100%;
+
+    img{
+        width:100%;
+    }
+
+    .gameblock-cont{
+        padding:30px;
+    }
+
+    span{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$soft );
+    }
+
+    h1{
+        @include textMaker(2.3rem,100 , 0px, none, $text);
+        margin-bottom:23px;
+    }
+
+    a{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$main );
+
+        &:hover{
+            color:#0F1014;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+.block{
+
+    position:relative;
+
+    .block-wrapper{
+        @include divMaker(20px,$dark );
+        padding:60px 40px 60px 40px;
+        margin-top:90px;
+    }
+
+    .artwork{
+        position:absolute;
+        bottom:0;
+        left:0;
+    }
+
+    .artworkr{
+        position:absolute;
+        bottom:0;
+        right:30px;
+    }
+
+    span{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$soft );
+    }
+
+    h2{
+        @include textMaker(3rem,100 ,0px ,none ,$text );
+    }
+
+    p{
+        @include textMaker(1rem,300 ,0px ,none ,$text );
+        margin-top:40px;
+        margin-bottom:40px;
+    }
+
+    a{
+        @include buttonMaker(auto,$main ,$bg );
+        @include textMaker(0.73rem,700 , 3px, uppercase, $dark);
+        padding:10px 30px 10px 30px;
+
+        &:hover{
+            color:$text;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+}
+
+.iframe-wrapper {
+    position: relative;
+    width: 60%;
+    padding-top: calc(100% / (19 / 6)); /* Maintain 19:6 aspect ratio */
+    overflow: hidden;
+    border-radius: 20px; /* Apply border-radius on wrapper to round corners */
+
+    @media (max-width:1024px){
+        width: 100%;
+    }
+  }
+  
+  .custom-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px; /* Ensure iframe corners are rounded */
+  }
+  
+
+
+.centerblock{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top:60px;
+    padding-bottom: 60px;
+
+    span{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$soft );
+    }
+
+    h1{
+        @include textMaker(3.3rem,100 ,0px ,none ,$text );
+        margin-bottom:30px;
+    }
+}
+
+
+.footer{
+    background-color: $dark;
+    border-top:6px solid $main;
+    border-radius:20px 20px 0px 0px;
+    padding:40px;
+
+
+    div{
+     
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:20px;
+
+        .social{
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap:20px;
+            flex-wrap:wrap;
+            
+            h3{
+                @include textMaker(1.13rem,300 ,0px ,none ,$text ); 
+            }
+            
+            img{
+                &:hover{
+                    scale:1.13;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+
+    }
+
+    hr{
+        border:none;
+        height:1px;
+        background-color: $bg;
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+
+    .copyright{
+        @include textMaker(0.73rem,300 ,3px ,uppercase ,$text );
+        display:inline-block;
+    }
+
+
+}
+
+.header{
+    padding-top:20px;
+}
+
+.hero-wrapper{
+    position:relative;
+    margin-top:60px;
+    margin-bottom:60px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-wrap{
+    text-align: center;
+    width:60%;
+    top:10%;
+    background: url('../images/herogrid.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    span{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$main );
+    }
+
+    h1{
+        @include textMaker(3.3rem,100 ,0px ,none ,$text );
+
+        span{
+            @include textMaker(3.3rem,700 ,0px ,none ,$text );
+        }
+    }
+
+    p{
+        @include textMaker(1.13rem,300 ,0px ,none ,$text );
+        margin-top:30px;
+    }
+}
+
+.aboutblock{
+   @include divMaker(20px,$dark );
+   margin-bottom:40px;
+   padding:60px;
+
+   p{
+    @include textMaker(1rem,300 ,0px ,none ,$text );
+   }
+
+   img{
+    width:100%;
+   }
+
+   span{
+    @include textMaker(0.73rem,700 ,3px ,uppercase , $soft);
+   }
+
+   h1{
+    @include textMaker(2.3rem,100 ,0px ,none ,$text );
+    margin-bottom:10px;
+   }
+}
+
+
+
+.vid-wrapper {
+    position: relative; /* Ensures proper positioning for the video */
+    width: 100%; /* Make the wrapper responsive */
+    height: 0;
+    padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio (adjust if needed) */
+    overflow: hidden; /* Hide anything outside the wrapper bounds */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    background-color: $dark; /* Optional: Add a fallback background color */
+  }
+  
+  .vid-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the video fill the wrapper */
+    height: 100%; /* Stretch video to match wrapper's height */
+    object-fit: cover; /* Ensures the video scales without distortion */
+  }
+
+.videos{
+    margin-top:40px;
+    margin-bottom:60px;
+}
+
+.vid-footer{
+    @include divMaker(20px,$dark );
+    margin-top:13px;
+
+    span{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$soft );
+    }
+
+    h1{
+        @include textMaker(1.63rem,100 ,0px ,none ,$text );
+    }
+}
+
+.contact{
+    @include divMaker(20px,$dark );
+    padding:40px;
+    margin-bottom:30px;
+
+    input[type=text], input[type=email], input, select{
+        width: 100%;
+        padding:10px 20px 10px 20px;
+        border-radius:40px;
+        border:none;
+        outline:none;
+        @include textMaker(1rem,300 ,0px ,none , $text);
+        background-color: $soft;
+    
+        &:focus{
+            border:3px solid $main;
+        }
+    }
+    
+    label{
+        @include textMaker(0.73rem,700 ,3px ,uppercase ,$soft );
+    }
+    
+    
+    
+    textarea{
+        width: 100%;
+        padding:10px 20px 10px 20px;
+        border-radius:20px;
+        border:none;
+        outline:none;
+        @include textMaker(1rem,300 ,0px ,none , $text);
+        background-color: $soft;
+        min-height:160px;
+    
+        &:focus{
+            border:3px solid $main;
+        }
+    }
+
+    button{
+        @include buttonMaker(130px,$main ,$soft );
+    }
+}
+

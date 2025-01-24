@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Importing Tailwind CSS Framework-->
+    <script src="js/tailwind.js"></script>
+
+
+    <!-- Importing CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- SEO Integration Part-->
+    <title>Games By Zine | Solo Video Game Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Games By Zine a Solo video game developer">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+     <!-- Hero Starts Here -->
+     <section class="hero">
+        <video autoplay loop muted>
+          <source src="videos/hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      
+        <div class="content">
+           <div class="container mx-auto px-4">
+              <div class="nav">
+                 <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Games By Zine Logo"/>
+                    </a>
+                 </div>
+                 <div class="navigation">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="https://store.steampowered.com/app/1828670/Alder_Forge_Soundtrack/" target="_blank">
+                        Soundtrack
+                    </a>
+                    <a href="https://youtube.com/playlist?list=PLLuiWKZFFPiTbfoNQyLRSQZ2NVA_7B5rM&si=yP46FbRhMjVdBQb6" target="_blank">
+                        Creation
+                    </a>
+                    <a href="contact.html">Contact</a>                   
+                    <button onclick="window.open('https://store.steampowered.com/developer/Games-By-Zine', '_blank');"> 
+                        Store 
+                    </button>
+                 </div>
+                 <div class="hamburger">
+                    <button onclick="toggleMobile()"><img src="images/hamburger.png" alt="Hamburger"/></button>
+                 </div>
+              </div>
+              <div class="herocontent">
+                 <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 lg:col-span-8 xl:col-span-6">
+                        <span>Forward, The Alder Forge</span>
+                        <h1>The Alder Forge 2</h1>
+                        <p>Play as a party of 8 in an Adaptive Turn-Based RPG, featuring dynamic boosts, crafting, skill fusion, 
+                            and the interactive cinematic battles of the Guardians. Join the 4th Squadron and their 3 allies as 
+                            they confront their toughest foe yet and witness the collapse of an old and tired feudal society.</p>
+                        <div class="herofooter">
+                            <a href="https://store.steampowered.com/app/3197590/Alder_Forge_2/" target="_blank" class="primary">
+                                Wishlist on Steam
+                            </a>
+                            <a href="https://store.steampowered.com/app/1575590/Alder_Forge/" target="_blank" class="secondary">
+                                Buy The Alder Forge 1
+                            </a>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="characters hidden lg:block">
+                 <div class="grid grid-cols-8 gap-4">
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>Adriel <span>Val Fiery</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c1.png" alt="Adriel Val Fiery"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>Fiona <span>De Roy</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c2.png" alt="Fiona De Roy"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>William <span>??? ??????</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c7.png" alt="William"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>Cassandra <span>Raysark</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c4.png" alt="Cassandra Raysark"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>Mirabelle <span>Reed</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c6.png" alt="Mirabelle Reed"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>Gilbert <span>Hull</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c3.png" alt="Gilbert Hull"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>Jeyne <span>Vermont</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c8.png" alt="Jeyne Vermont"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-8 lg:col-span-2">
+                        <div class="c-wrapper">
+                            <div class="c-container">
+                                <span>Party</span>
+                                <h2>Leo <span>Lagore</span></h2>
+                            </div>
+                            <div class="c-art">
+                                <img src="images/c5.png" alt="Leo Lagore"/>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- Hamburger Open Menu In Mobile View -->
+      <div class="navigation-mobile" id="navmobile">
+        <a href="#" onclick="toggleMobile()"><img src="images/close.png" alt="Close Mobile Menu" class="closemobile"/></a>
+        <nav>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://store.steampowered.com/app/1828670/Alder_Forge_Soundtrack/" target="_blank">
+            Soundtrack
+        </a></li>
+        <li><a href="https://youtube.com/playlist?list=PLLuiWKZFFPiTbfoNQyLRSQZ2NVA_7B5rM&si=yP46FbRhMjVdBQb6" target="_blank">
+            Creation
+        </a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </nav>                   
+        <button onclick="window.open('https://store.steampowered.com/developer/Games-By-Zine', '_blank');"> 
+            Store 
+        </button>
+     </div>
+
+
+     <!-- Mobile Nav Script -->
+     <script>
+
+        function toggleMobile(){
+            navmobile = document.querySelector('#navmobile');
+            if (navmobile.style.display === 'none' || navmobile.style.display === '') {
+                navmobile.style.display = 'block'; // Show the div
+            } else {
+                navmobile.style.display = 'none'; // Hide the div
+            }
+        }
+
+     </script>
+
+
+<!-- About Section -->
+<div class="about">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-12 lg:col-span-6">
+                <span>Crafting Games</span>
+                <h1>About Games By Zine</h1>
+            </div>
+            <div class="col-span-12 lg:col-span-6">
+                <p>Hi, My name is Zine E Falouti and I'm an independent video game developer, 
+                    I enjoy every moment while crafting experiences with 
+                    the hope that you will enjoy it...</p>
+                <a href="about.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 3 Games Section -->
+<div class="games">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-3 lg:col-span-1">
+                <div class="gameblock">
+                    <img src="images/g1.png" alt="Alder Forge 2"/>
+                    <div class="gameblock-cont">
+                        <span>Video Game</span>
+                        <h1>The Alder Forge 2</h1>
+                        <a href="https://store.steampowered.com/app/3197590/Alder_Forge_2/" target="_blank">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-3 lg:col-span-1">
+                <div class="gameblock">
+                    <img src="images/g2.png" alt="Alder Forge"/>
+                    <div class="gameblock-cont">
+                        <span>Video Game</span>
+                        <h1>The Alder Forge</h1>
+                        <a href="https://store.steampowered.com/app/1575590/Alder_Forge/?curator_clanid=35603041" target="_blank">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-3 lg:col-span-1">
+                <div class="gameblock">
+                    <img src="images/g3.png" alt="Stones of Yalmrith"/>
+                    <div class="gameblock-cont">
+                        <span>Video Game</span>
+                        <h1>Stones of Yalmrith</h1>
+                        <a href="https://store.steampowered.com/app/867080/Stones_of_Yalmrith" target="_blank">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Music Block -->
+
+<div class="container mx-auto px-4">
+    <div class="block">
+        <div class="block-wrapper">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2 xl:col-span-1 xl:col-start-2">
+                      <span>Music For The Alder Forge</span>
+                      <h2>From Strings To Choir</h2>
+                      <p>Exploration, cinematics, or battles. The Alder Forge soundtrack was composed and orchestrated 
+                        to help you enjoy the world of Ertherya and its culture.</p>
+                      <a href="https://store.steampowered.com/app/1828670/Alder_Forge_Soundtrack/" target="_blank">
+                        Soundtrack
+                      </a>
+                </div>
+            </div>
+        </div>
+        <div class="artwork hidden xl:block">
+            <img src="images/b1.png" alt="Purple Witch"/>
+        </div>
+    </div>
+    <div class="block">
+        <div class="block-wrapper">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2 xl:col-span-1">
+                      <span>Gaia Always Wins</span>
+                      <h2>The Alder Forge</h2>
+                      <p>Behind the mystic or the fantasy of the Alder Forge a bio-tech system that kept planet earth in 
+                        one piece after the Great-Cataclysm. In the Alder Forge 2, this bio-tech system will be unveiled 
+                        further to the players, layer by layer.</p>
+                      <a href="https://store.steampowered.com/app/3197590/Alder_Forge_2/" target="_blank">
+                        Soundtrack
+                      </a>
+                </div>
+            </div>
+        </div>
+        <div class="artworkr hidden xl:block">
+            <img src="images/b2.png" alt="Gaia"/>
+        </div>
+    </div>
+    <div class="block">
+        <div class="block-wrapper">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2 xl:col-span-1 xl:col-start-2">
+                      <span>Legends From The Past</span>
+                      <h2>History of Ertherya</h2>
+                      <p>The world of the Alder Forge boasts of 947 years of recorded history. From the exact bloodline 
+                        trees of the four royal houses of Orvys, Elysia, Royne, and Meredith, to the wars, conflicts, 
+                        academic achievements, and times of peace as well.</p>
+                      <a href="https://store.steampowered.com/app/1575590/Alder_Forge/?curator_clanid=35603041" target="_blank">
+                        Soundtrack
+                      </a>
+                </div>
+            </div>
+        </div>
+        <div class="artwork hidden xl:block">
+            <img src="images/b3.png" alt="Lauren Gwendorf"/>
+        </div>
+    </div>
+</div>
+
+
+<!-- Trailer Section Starts Here -->
+<div class="container mx-auto px-4">
+    <div class="centerblock">
+        <span>Announce Trailer</span>
+        <h1>Alder Forge 2</h1>
+        <div class="iframe-wrapper">
+            <iframe class="custom-iframe" src="https://www.youtube.com/embed/Y1yDducWqVc" title="Alder Forge 2 - Announce Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="container mx-auto px-4">
+    <div class="footer">
+        <div>
+            <div class="logo-footer">
+                <img src="images/logo.png" alt="Games By Zine Logo"/>
+            </div>
+            <div class="social">
+                <h3>Join Me On: </h3>
+                <a href="https://www.youtube.com/@gamesbyzine" target="_blank"><img src="images/twitter.png" alt="Games By Zine Twitter"/></a>
+                <a href="https://www.twitter.com/gamesbyzine" target="_blank"><img src="images/youtube.png" alt="Games By Zine Youtube"/></a>
+                <a href="https://discord.com/invite/SRS9gUeGUj" target="_blank"><img src="images/discord.png" alt="Games By Zine Discord"/></a>
+            </div>
+        </div>
+        <hr/>
+        <div class="copyright">
+            COPYRIGHT © <span id="year">2023</span> ZINE E FALOUTI A SOLO VIDEO GAME DEVELOPER
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = new Date().getFullYear(); // Get the current year
+        document.querySelector("#year").textContent = currentYear; // Set it to the span
+    });
+</script>
+
+</body>
+</html>

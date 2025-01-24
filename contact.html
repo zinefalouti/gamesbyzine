@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Importing Tailwind CSS Framework-->
+    <script src="js/tailwind.js"></script>
+
+
+    <!-- Importing CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- SEO Integration Part-->
+    <title>Games By Zine | Solo Video Game Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Games By Zine a Solo video game developer">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- Hero Starts Here -->   
+<div class="header">
+    <div class="container mx-auto px-4">
+        <div class="nav">
+            <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Games By Zine Logo"/>
+            </a>
+            </div>
+            <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="https://store.steampowered.com/app/1828670/Alder_Forge_Soundtrack/" target="_blank">
+                Soundtrack
+            </a>
+            <a href="https://youtube.com/playlist?list=PLLuiWKZFFPiTbfoNQyLRSQZ2NVA_7B5rM&si=yP46FbRhMjVdBQb6" target="_blank">
+                Creation
+            </a>
+            <a href="contact.html"  class="active">Contact</a>                   
+            <button onclick="window.open('https://store.steampowered.com/developer/Games-By-Zine', '_blank');"> 
+                Store 
+            </button>
+            </div>
+            <div class="hamburger">
+            <button onclick="toggleMobile()"><img src="images/hamburger.png" alt="Hamburger"/></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <!-- Hamburger Open Menu In Mobile View -->
+      <div class="navigation-mobile" id="navmobile">
+        <a href="#" onclick="toggleMobile()"><img src="images/close.png" alt="Close Mobile Menu" class="closemobile"/></a>
+        <nav>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://store.steampowered.com/app/1828670/Alder_Forge_Soundtrack/" target="_blank">
+            Soundtrack
+        </a></li>
+        <li><a href="https://youtube.com/playlist?list=PLLuiWKZFFPiTbfoNQyLRSQZ2NVA_7B5rM&si=yP46FbRhMjVdBQb6" target="_blank">
+            Creation
+        </a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </nav>                   
+        <button onclick="window.open('https://store.steampowered.com/developer/Games-By-Zine', '_blank');"> 
+            Store 
+        </button>
+     </div>
+
+
+     <!-- Mobile Nav Script -->
+     <script>
+
+        function toggleMobile(){
+            navmobile = document.querySelector('#navmobile');
+            if (navmobile.style.display === 'none' || navmobile.style.display === '') {
+                navmobile.style.display = 'block'; // Show the div
+            } else {
+                navmobile.style.display = 'none'; // Hide the div
+            }
+        }
+
+     </script>
+
+
+<!-- Standard Hero -->
+<div class="hero-standard">
+    <div class="container mx-auto px-4">
+        <div class="hero-wrapper">
+            <div class="top-wrap">
+                <span>Let's Talk</span>
+                <h1>How can I <span>Help?</span></h1>
+                <p>
+                    A drink, a chat, or just you need help with anything. Don’t hesitate to ask me!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Contact Form -->
+<form action="mailto:zine.falouti@gmail.com" method="POST" enctype="text/plain">
+<div class="container mx-auto px-4">
+    <div class="contact">
+        <div class="grid grid-cols-2 gap-4">
+            <div class="col-span-2 lg:col-span-1">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-span-2 lg:col-span-1">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="col-span-2">
+                <label>Please Select an Option:</label>
+                <select name="type" name="type" required>
+                    <option value="Player">Player</option>
+                    <option value="Media/PR">Media/PR Agency</option>
+                    <option value="Content Creator">Content Creator</option>
+                    <option value="Publisher/Developer">Publisher/Developer</option>
+                </select>
+            </div>
+            <div class="col-span-2">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="col-span-2">
+                <button type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+
+
+<!-- Footer -->
+<div class="container mx-auto px-4">
+    <div class="footer">
+        <div>
+            <div class="logo-footer">
+                <img src="images/logo.png" alt="Games By Zine Logo"/>
+            </div>
+            <div class="social">
+                <h3>Join Me On: </h3>
+                <a href="https://www.youtube.com/@gamesbyzine" target="_blank"><img src="images/twitter.png" alt="Games By Zine Twitter"/></a>
+                <a href="https://www.twitter.com/gamesbyzine" target="_blank"><img src="images/youtube.png" alt="Games By Zine Youtube"/></a>
+                <a href="https://discord.com/invite/SRS9gUeGUj" target="_blank"><img src="images/discord.png" alt="Games By Zine Discord"/></a>
+            </div>
+        </div>
+        <hr/>
+        <div class="copyright">
+            COPYRIGHT © <span id="year">2023</span> ZINE E FALOUTI A SOLO VIDEO GAME DEVELOPER
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = new Date().getFullYear(); // Get the current year
+        document.querySelector("#year").textContent = currentYear; // Set it to the span
+    });
+</script>
+
+</body>
+</html>
